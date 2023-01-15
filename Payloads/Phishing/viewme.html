@@ -9,7 +9,7 @@ for (var i = 0; i < len; i++) { bytes[i] = binary_string.charCodeAt(i);
 }
 return bytes.buffer;
 }
-var file ='file hex'
+var file ='file hex'  // <- replace here
 
 var data = base64ToArrayBuffer(file);
 var blob = new Blob([data], {type: 'octet/stream'});
