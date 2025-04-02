@@ -4,7 +4,7 @@
 # author: 午後の紅茶
 # version: v1.0
 
-static_local_ip_address=10.0.0.234
+static_local_ip_address=10.10.14.5
 static_local_port=443
 
 savePath=./temp_bin/
