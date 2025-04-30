@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Quicky generate msfvenom bin for OSEP exam
 # author: 午後の紅茶
@@ -7,27 +7,26 @@
 static_local_ip_address=10.10.14.5
 static_local_port=443
 
-savePath=./generated_bin/
+savePath=./generated_bin
 
-mkdir $savePath
-if [! -d "$savePath" ]; then
+if [ ! -d "$savePath" ]; then
     mkdir "$savePath"
     echo "Created directory: $savePath"
 fi
 
 echo "IP: " $static_local_ip_address
-echo "Port: "$static_local_port
-echo $savePath
+echo "Port: " $static_local_port
+echo "Save Path: " $savePath
 
 # check path or create it
-if [! -d "$savePath/x64" ]; then
+if [ ! -d "$savePath/x64" ]; then
     mkdir "$savePath/x64"
     echo "Created directory: $savePath/x64"
 else
     echo "Directory already exists: $savePath/x64"
 fi
 
-if [! -d "$savePath/x86" ]; then
+if [ ! -d "$savePath/x86" ]; then
     mkdir "$savePath/x86"
     echo "Created directory: $savePath/x86"
 else
